@@ -1,4 +1,4 @@
-CREATE TABLE table10 (
+CREATE TABLE eldata (
 	id varchar PRIMARY KEY,
 	tammi1 varchar,
 	tammi2 varchar,
