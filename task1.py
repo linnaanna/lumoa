@@ -3,7 +3,7 @@ import psycopg2
 
 def create_and_insert():
 
-   con=None
+   conn = None
    try:
 # read JSON data from file
       with open('properties.json') as f:
@@ -34,11 +34,13 @@ def create_and_insert():
       cur.close()
       conn.close()
 
+# handle errors
+
    except (Exception, psycopg2.DatabaseError) as error:
             print(error)
    finally:
-         if con is not None:
-            con.close()
+         if conn is not None:
+            conn.close()
 
-
+# call function
 create_and_insert()
