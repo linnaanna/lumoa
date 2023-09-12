@@ -21,9 +21,8 @@ def insert_data(propertyCode):
 
 # execute the INSERT statement
 
-    sql = "INSERT INTO table10 (id, tammi1, tammi2, tammi3, tammi4, tammi5, tammi6, tammi7, tammi8, tammi9, tammi10, tammi11, tammi12, tammi13, tammi14) VALUES"
+    sql = "INSERT INTO eldata (id, tammi1, tammi2, tammi3, tammi4, tammi5, tammi6, tammi7, tammi8, tammi9, tammi10, tammi11, tammi12, tammi13, tammi14) VALUES"
     vals = []
-
     vals.append("('%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s')" %
                 ( propertyCode, data[0]['value'], data[1]['value'], data[2]['value'], data[3]['value'], data[4]['value'], data[5]['value'], data[6]['value'], data[7]['value'], data[8]['value'], data[9]['value'], data[10]['value'], data[11]['value'], data[12]['value'], data[13]['value']))
     cur.execute(sql + "," .join(vals))
